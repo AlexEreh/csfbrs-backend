@@ -1,0 +1,41 @@
+type Query {
+    personByLoginAndPassword(login: String, password: String): PersonData
+    gradesByLoginAndPassword(login: String, password: String): [StatisticRow]
+}
+
+type StatisticRow {
+    studyYear: String
+    semesterNumber: Int
+    courseNumber: Int
+    disciplineName: String
+    scoringType: ScoringType
+    tutor: String
+    marks: Marks
+}
+
+type Marks {
+    firstAttestationScore: Int
+    secondAttestationScore: Int
+    thirdAttestationScore: Int
+    examScore: Int
+    additionalScore: Int
+    resultScore: Int
+}
+
+enum ScoringType {
+    EXAM
+    CREDIT
+    DIFFERENTIATED_CREDIT
+}
+
+type PersonData {
+    firstName: String
+    lastName: String
+    patronymic: String
+    course: Int
+    semester: Int
+    group: Int
+    subGroup: Int
+    programmeName: String
+    grades: [StatisticRow]
+}
