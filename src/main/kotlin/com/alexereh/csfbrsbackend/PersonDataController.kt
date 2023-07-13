@@ -4,10 +4,13 @@ import com.alexereh.csfbrsbackend.model.PersonData
 import com.alexereh.csfbrsbackend.skrape.PersonSkraper
 import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.QueryMapping
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.RestController
 
+@CrossOrigin
 @RestController
 class PersonDataController {
+
 	@QueryMapping
 	fun personByLoginAndPassword(
 		@Argument login: String,

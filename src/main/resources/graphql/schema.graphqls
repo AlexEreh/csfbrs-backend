@@ -1,6 +1,6 @@
 type Query {
     personByLoginAndPassword(login: String, password: String): PersonData
-    gradesByLoginAndPassword(login: String, password: String): [StatisticRow]
+    #gradesByLoginAndPassword(login: String, password: String): [StatisticRow]
 }
 
 type StatisticRow {

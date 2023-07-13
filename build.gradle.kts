@@ -35,6 +35,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework:spring-webflux")
 	testImplementation("org.springframework.graphql:spring-graphql-test")
+	implementation("org.jsoup:jsoup")
 	// TODO Check for real security vulnerabilities
 	implementation("it.skrape:skrapeit:1.1.5")
 }
